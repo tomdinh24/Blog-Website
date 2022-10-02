@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+    <!-- page title -->
+    <h1>Compose</h1>
+
+    <!-- collects user input and perform an action from app.js post function-->
+    <form class="item" action="/compose" method="post">
+        
+        <!-- group the title and input area together-->
+        <div class="form-group">
+            
+            <!-- display title -->
+            <label>Title</lable>
+
+            <!-- input area for title -->
+            <input type="text" class="form-control" name="postTitle" placeholder="Enter Title" autocomplete="off">
+
+            <!-- display post -->  
+            <label>Post</label>
+
+            <!-- input area for post-->
+            <textarea type="text" class="form-control" name="postBody" placeholder="Enter Text" cols="40" rows="5" autocomplete="off"></textarea>
+
+        </div>
+        
+        <!-- app.js retrieve information from text area above -->
+        <button class="btn btn-secondary" type="submit" name="post">Publish</button>
+
+    </form>
+
+<%- include("partials/footer"); -%>
